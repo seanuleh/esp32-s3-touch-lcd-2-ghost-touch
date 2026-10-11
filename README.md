@@ -89,7 +89,6 @@ assigned to it. Driving it at 40 mA reaches the pad, so the load is external.
   component on `IMU_INT1` that isn't in the PDF?
 - Does INT1 work on any board you have? If so, what is different about it?
 - Is U3 the QMI8658C or the A on shipped boards? (`CTRL1` bit 3 enables INT1 on the A and is reserved on the C.)
-- Is the ghost-touch fault above related (both are on the shared 3V3 / I2C parts of the board)?
 
 **To test it:** `imu_int1_test/imu_int1_test.ino` needs no libraries (Arduino core only, `Wire` on SDA 48 / SCL 47) and
 prints the steps above over serial at 115200. **Unplug USB and replug before running**, so the IMU is at power-on defaults
